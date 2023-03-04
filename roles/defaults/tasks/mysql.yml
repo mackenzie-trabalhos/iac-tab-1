@@ -1,0 +1,4 @@
+- name: Install Mysql
+  package:
+    name: mysql-server
+    state: present

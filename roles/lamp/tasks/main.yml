@@ -1,0 +1,7 @@
+- name: Lamp setup
+  hosts: server03
+  become: yes
+  tasks:
+    - include: ../../defaults/tasks/apache.yml
+    - include: ../../defaults/tasks/mysql.yml
+    - include: ../../defaults/tasks/php.yml

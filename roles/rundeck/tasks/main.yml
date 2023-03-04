@@ -1,0 +1,10 @@
+- name: Rundeck setup
+  hosts: server02
+  become: yes
+  tasks:
+    - include: ../../defaults/tasks/java.yml
+
+    - name: Install Rundeck
+      package:
+        name: rundeckpro-enterprise
+        state: present
